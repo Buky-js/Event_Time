@@ -1,0 +1,135 @@
+
+[
+  {
+    "title": "YQM Country Fest 2023",
+    "present_by": "YQM Country Fest",
+    "dateandtime": "Fri, 25 Aug 2023, 1:00 PM",
+    "location": "475 Rue Notre Dame Dieppe, NB E1A 4Y3",
+    "category_id": 1,
+    "filename": "01-yqm-country-fest-2023.png",
+    "price": 300,
+    "description":
+      ""
+  },
+  {
+    "title": "Fredericton Craft Beer Festival 2023",
+    "present_by": "Fredericton Craft Beer Festival",
+    "dateandtime": "Sat, 11 Mar 2023, 9:30 PM AST",
+    "location": "670 Queen St Fredericton, NB E3B 1C2",
+    "category_id": 2,
+    "filename": "02-fredericton-craft-beer-festival-2023.png",
+    "price": 100,
+    "description":
+        "Join us for the 10th Annual Fredericton Craft Beer Festival on March 11 th, 2023, at the Fredericton Convention Centre. We will be sampling some of the best beers around and are pleased to announce that we will have a great selection of beers/ciders/mead for you to choose from on your sampling journey! We will showcase over 45 breweries, cideries and a meadery. Need a room? The Venue - Located in the heart of a charming and pristine capital city, the Fredericton Convention Centre is New Brunswick’s premier meeting destination, offering a warm Maritime experience in a modern, chic building filled with natural light, a stone’s throw from the majestic Saint John River."
+  },
+  {
+    "title": "Down East Brew Festival 2023",
+    "present_by": "Fredericton Craft Beer Festival",
+    "dateandtime": "Sat, 5 August 2023, 4:00 PM - 8:00 PM ADT",
+    "location": "Outdoors on the Street Rue Carleton Street Fredericton, NB E3B",
+    "category_id": 2,
+    "filename": "03-down-east-brew-festival-2023.png",
+    "price": 100,
+    "description":
+      "Join us outdoors on Carleton Street as we enjoy some great local beer, cider, mead, spirits & wine. On Aug 5th, we will showcase some of the region's best products. This is an outdoor event, a Rain or Shine event!"
+  },
+  {
+    "title": "March Brack Cooking Camp",
+    "present_by": "Sam’s Second Spoon",
+    "dateandtime": "Mon, 6 March 2023, 12:00 PM - 4:00 PM AST",
+    "location": "303 Woodlawn Lane New Maryland, NB E3C 1J4",
+    "category_id": 2,
+    "filename": "04-march-brack-cooking-camp.png",
+    "price": 50,
+    "description":
+      "Sam’s Second Spoon is organizing cooking classes for young kids aged 10 to 15 during the March break.These 5 days are designed to show kids that cooking can be fun and a factor in building their personalities.Our main objectives are to teach kids how to communicate, develop their sense of taste, and create their blends. But on top of that, and most importantly, have fun."
+  },
+  {
+    "title": "Stone Soup Society",
+    "present_by": "Greener Village",
+    "dateandtime": "Mon, 27 Feb 2023, 6:00 PM AST",
+    "location": "Fredericton Food Bank 686 Riverside Drive Fredericton, NB E3A 8C2",
+    "category_id": 1,
+    "filename": "05-stone-soup-society",
+    "price": 25,
+    "description":
+      "In person activity at the Greener Village Learning Kitchen, 686 Riverside Drive Fredericton NB. Seeking individuals to help prepare large batches of soup to be portioned out in our Food Bank and given out Free to our Fredericton Food Bank Clients."
+  },
+  {
+    "title": "The Ultimate Craft Beer Dinner",
+    "present_by": "Delta Hotels by Marriott Fredericton",
+    "dateandtime": "Fri, 10 March 2023, 6:00 PM - 9:00 PM AST",
+    "location": "225 Woodstock Road Fredericton, NB E3B 2H8",
+    "category_id": 2,
+    "filename": "06-the-ultimate-craft-beer-dinner",
+    "price": 100,
+    "description":
+      "Vote on your favorite brewery, and we will present them with a trophy!"
+  },
+  {
+    "title": "Living Roots Music Festival",
+    "present_by": "Living Roots Music Festival",
+    "dateandtime": "Jun 8, 2023",
+    "location": "Various locations, Fredericton, NB",
+    "category_id": 1,
+    "filename": "07-rock-fest-19+",
+    "price": 0,
+    "description":
+      "A roots festival taking place in several small venues including living rooms, cafes, restaurants, parks, street corners, or anywhere else. Acts from across the country and beyond; full range or solo, duo and bands, poetry... anything goes."
+  },
+  {
+    "title": "Beer on the Bridge",
+    "present_by": "Beer on the Bridge",
+    "dateandtime": "JUL 8, 2023" ,
+    "location": "Bill Thorpe Walking Bridge, Fredericton, NB",
+    "category_id": 2,
+    "filename": "09-beer-on-the-bridge",
+    "price": 0,
+    "description":
+      "The Rotary Club of Fredericton Sunrise and SNAP! A Burlesque Revue welcome you to join us on the Bill Thorpe Walking Bridge in Fredericton for a festival of the spirits! Give back to your community while you watch the sun go down over the mighty Saint John river. Come support Rotary's community projects while enjoying mead, beer and cider, live music, and food from some of New Brunswick's best! Beer, cider and mead are included, as is a custom sampling glass. Come support Rotary's community projects while enjoying mead, beer and cider, live music, and food from some of New Brunswick's best! Beer, cider and mead are included, as is a custom BotB sampling glass that will be provided to you on entry. Sample one or sample them all, it's up to you. (Please drink responsibly!)."
+  },
+  {
+    "title": "Ballet by the Ocean - Summer Series",
+    "present_by": "Atlantic Ballet Atlantique Canada",
+    "dateandtime": "Jul 5, 2023",
+    "location": "Secret Location, Grande-Digue, NB",
+    "category_id": 1,
+    "filename": "10-ballet-by-the-ocean-summer-series",
+    "price": 100,
+    "description":
+      "Allow your senses to guide you in this one-of-a-kind exclusive experience. Come immerse yourself in the scenic backdrop of one of New Brunswick’s most stunning natural habitats while enjoying the astounding beauty of the award-winning Atlantic Ballet and savouring incredible local food pairings by celebrated New Brunswick chefs."
+  },
+  {
+    "title": "Cultural Expressions Festival",
+    "present_by": "Multicultural Association of Fredericton",
+    "dateandtime": "Jun 24, 2023",
+    "location": "Capital Exhibit Centre, 355 Smythe Street, Fredericton, NB",
+    "category_id": 1,
+    "filename": "11-cultural-expressions-festival",
+    "price": 0,
+    "description":
+      "One exciting day of LIVE entertainment from around the world. Special activities for families; multicultural dance & music, international food, displays & more. Free admission."
+  },
+  {
+    "title": "Songwriter circle",
+    "present_by": "Roots & Soul Music Promotions",
+    "dateandtime": "Thu Mar 9, 2023, 8:30 PM",
+    "location": "Five and Dime, 34 Grannan Street,Saint John,NB,Canada, Saint John, Canada",
+    "category_id": 1,
+    "filename": "12-songwriter-circle",
+    "price": 10,
+    "description":
+      "Roots & Soul annual songwriter circle will make a stop in Saint John. We will have 4 artists on stage together each taking turns telling stories and playing songs. Show starts at 8:30 PM"
+  },
+  {
+    "title": "The Last Waltz New Brunswick",
+    "present_by": "The Last Waltz New Brunswick",
+    "dateandtime": "Sat Apr 8 2023 at 7:30 pm",
+    "location": "Imperial Theatre, 12 King Square South,Saint John,NB,Canada, Saint John, Canada",
+    "category_id": 1,
+    "filename": "13.the-last-waltz-new-brunswick",
+    "price": 200,
+    "description":
+      "New Brunswick pays tribute to one of the greatest concerts of all time – April 6/7/8, 2023. The Last Waltz New Brunswick features an all-star cast of NB artists, all backed by the East Coast’s most dedicated “The Band” band — King Harvest."
+  }
+]
