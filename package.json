@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "sequelize": "^6.28.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "event_time",
+  "description": "event_calendar",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZairaBarry/Event_Time.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZairaBarry/Event_Time/issues"
+  },
+  "homepage": "https://github.com/ZairaBarry/Event_Time#readme"
+}
