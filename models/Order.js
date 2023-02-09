@@ -25,7 +25,6 @@ Order.init(
                 model: 'user',
                 key: 'id',
             },
-
         },
 
         event_id: {
@@ -35,7 +34,6 @@ Order.init(
                 model: 'event',
                 key: 'id',
             },
-
         }
     },
 

@@ -2,9 +2,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Saved_Event extends Model { }
+class Saved_event extends Model { }
 
-Saved_Event.init(
+Saved_event.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -20,9 +20,15 @@ Saved_Event.init(
                 model: 'event',
                 key: 'id',
             },
-
         },
-
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
+        },        
         notes: {
             type: DataTypes.STRING
         }
@@ -37,5 +43,5 @@ Saved_Event.init(
     }
 );
 
-module.exports = Saved_Event;
+module.exports = Saved_event;
 
