@@ -13,17 +13,19 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for(const event of eventData) {
-    await Event.create({
-      ...event,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
-
-  await Category.bulkCreate(categoryData, {
+  const category = await Category.bulkCreate(categoryData, {
     individualHooks: true,
     returning: true,
   });
+
+  for(const event of eventData) {
+    await Event.create({
+      ...event,
+      category_id: category[Math.floor(Math.random() * category.length)].id,
+    });
+  }
+
+  ;
 
   process.exit(0);
 };
