@@ -14,7 +14,7 @@
   {
     "title": "Fredericton Craft Beer Festival 2023",
     "present_by": "Fredericton Craft Beer Festival",
-    "dateandtime": "Sat, 11 Mar 2023, 9:30 PM AST",
+    "dateandtime": "2023-03-11 21:30:00",
     "location": "670 Queen St Fredericton, NB E3B 1C2",
     "category_id": 2,
     "filename": "02-fredericton-craft-beer-festival-2023.png",
@@ -25,7 +25,7 @@
   {
     "title": "Down East Brew Festival 2023",
     "present_by": "Fredericton Craft Beer Festival",
-    "dateandtime": "Sat, 5 August 2023, 4:00 PM - 8:00 PM ADT",
+    "dateandtime": "2023-08-05 04:00:00",
     "location": "Outdoors on the Street Rue Carleton Street Fredericton, NB E3B",
     "category_id": 2,
     "filename": "03-down-east-brew-festival-2023.png",
@@ -36,7 +36,7 @@
   {
     "title": "March Brack Cooking Camp",
     "present_by": "Sam’s Second Spoon",
-    "dateandtime": "Mon, 6 March 2023, 12:00 PM - 4:00 PM AST",
+    "dateandtime": "2023-03-06 12:00:00",
     "location": "303 Woodlawn Lane New Maryland, NB E3C 1J4",
     "category_id": 2,
     "filename": "04-march-brack-cooking-camp.png",
@@ -47,7 +47,7 @@
   {
     "title": "Stone Soup Society",
     "present_by": "Greener Village",
-    "dateandtime": "Mon, 27 Feb 2023, 6:00 PM AST",
+    "dateandtime": "2023-02-27 18:00:00",
     "location": "Fredericton Food Bank 686 Riverside Drive Fredericton, NB E3A 8C2",
     "category_id": 1,
     "filename": "05-stone-soup-society",
@@ -58,7 +58,7 @@
   {
     "title": "The Ultimate Craft Beer Dinner",
     "present_by": "Delta Hotels by Marriott Fredericton",
-    "dateandtime": "Fri, 10 March 2023, 6:00 PM - 9:00 PM AST",
+    "dateandtime": "2023-03-10 18:00:00",
     "location": "225 Woodstock Road Fredericton, NB E3B 2H8",
     "category_id": 2,
     "filename": "06-the-ultimate-craft-beer-dinner",
@@ -69,7 +69,7 @@
   {
     "title": "Living Roots Music Festival",
     "present_by": "Living Roots Music Festival",
-    "dateandtime": "Jun 8, 2023",
+    "dateandtime": "2023-06-08 18:00:00",
     "location": "Various locations, Fredericton, NB",
     "category_id": 1,
     "filename": "07-rock-fest-19+",
@@ -80,7 +80,7 @@
   {
     "title": "Beer on the Bridge",
     "present_by": "Beer on the Bridge",
-    "dateandtime": "JUL 8, 2023" ,
+    "dateandtime": "2023-07-08 14:30:00" ,
     "location": "Bill Thorpe Walking Bridge, Fredericton, NB",
     "category_id": 2,
     "filename": "09-beer-on-the-bridge",
@@ -91,7 +91,7 @@
   {
     "title": "Ballet by the Ocean - Summer Series",
     "present_by": "Atlantic Ballet Atlantique Canada",
-    "dateandtime": "Jul 5, 2023",
+    "dateandtime": "2023-07-05 14:30:00",
     "location": "Secret Location, Grande-Digue, NB",
     "category_id": 1,
     "filename": "10-ballet-by-the-ocean-summer-series",
@@ -102,7 +102,7 @@
   {
     "title": "Cultural Expressions Festival",
     "present_by": "Multicultural Association of Fredericton",
-    "dateandtime": "Jun 24, 2023",
+    "dateandtime": "2023-06-24 14:30:00",
     "location": "Capital Exhibit Centre, 355 Smythe Street, Fredericton, NB",
     "category_id": 1,
     "filename": "11-cultural-expressions-festival",
@@ -113,7 +113,7 @@
   {
     "title": "Songwriter circle",
     "present_by": "Roots & Soul Music Promotions",
-    "dateandtime": "Thu Mar 9, 2023, 8:30 PM",
+    "dateandtime": "2023-03-09 20:30:00",
     "location": "Five and Dime, 34 Grannan Street,Saint John,NB,Canada, Saint John, Canada",
     "category_id": 1,
     "filename": "12-songwriter-circle",
@@ -124,7 +124,7 @@
   {
     "title": "The Last Waltz New Brunswick",
     "present_by": "The Last Waltz New Brunswick",
-    "dateandtime": "Sat Apr 8 2023 at 7:30 pm",
+    "dateandtime": "2023-04-08 21:30:00",
     "location": "Imperial Theatre, 12 King Square South,Saint John,NB,Canada, Saint John, Canada",
     "category_id": 1,
     "filename": "13.the-last-waltz-new-brunswick",
