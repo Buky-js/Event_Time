@@ -2,27 +2,32 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Saved_Event extends Model { }
+class Saved_event extends Model { }
 
-Saved_Event.init(
+Saved_event.init(
     {
         id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+            type: DataTypes.UUID,
+            defaultValue: DataTypes.UUIDV4,
+            // allowNull: true,
             primaryKey: true,
-            autoIncrement: true
+            // autoIncrement: true
         },
 
         event_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+            type: DataTypes.UUID,
             references: {
                 model: 'event',
                 key: 'id',
             },
-
         },
-
+        user_id: {
+            type: DataTypes.UUID,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
+        },        
         notes: {
             type: DataTypes.STRING
         }
@@ -37,5 +42,5 @@ Saved_Event.init(
     }
 );
 
-module.exports = Saved_Event;
+module.exports = Saved_event;
 

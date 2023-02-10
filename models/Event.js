@@ -1,22 +1,22 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-
+const {v4:uuid} = require('uuid')
 
 class Event extends Model { }
 Event.init(
     {
         id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+            type: DataTypes.UUID,
+            defaultValue: DataTypes.UUIDV4,
+            // allowNull: true,
             primaryKey: true,
-            autoIncrement: true
+            // autoIncrement: true
         },
 
         title: {
             type: DataTypes.STRING,
             allowNull: false
         },
-
 
         present_by: {
             type: DataTypes.STRING
@@ -34,8 +34,7 @@ Event.init(
         },
 
         category_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+            type: DataTypes.UUID,
             references: {
                 model: 'category',
                 key: 'id',
@@ -45,7 +44,6 @@ Event.init(
 
         file_name: {
             type: DataTypes.STRING,
-            allowNull: false,
         },
 
         price: {

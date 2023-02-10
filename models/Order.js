@@ -7,10 +7,11 @@ class Order extends Model { }
 Order.init(
     {
         id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+            type: DataTypes.UUID,
+            defaultValue: DataTypes.UUIDV4,
+            // allowNull: true,
             primaryKey: true,
-            autoIncrement: true
+            // autoIncrement: true
         },
 
         amount: {
@@ -19,23 +20,19 @@ Order.init(
         },
 
         user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+            type: DataTypes.UUID,
             references: {
                 model: 'user',
                 key: 'id',
             },
-
         },
 
         event_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+            type: DataTypes.UUID,
             references: {
                 model: 'event',
                 key: 'id',
             },
-
         }
     },
 

@@ -17,7 +17,8 @@ Order.belongsTo(User,{
 });
 
 User.hasMany(Order,{
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 });
 
 Saved_event.belongsTo(User,{
@@ -25,7 +26,8 @@ Saved_event.belongsTo(User,{
 });
 
 User.hasMany(Saved_event,{
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 });
 
 Saved_event.belongsTo(Event,{
@@ -33,7 +35,8 @@ Saved_event.belongsTo(Event,{
 });
 
 Event.hasMany(Saved_event,{
-    foreignKey: 'event_id'
+    foreignKey: 'event_id',
+    onDelete: 'CASCADE'
 });
 
 Event.belongsTo(Category,{
@@ -41,7 +44,8 @@ Event.belongsTo(Category,{
 });
 
 Category.hasMany(Event,{
-    foreignKey: 'category_id'
+    foreignKey: 'category_id',
+    onDelete: 'CASCADE'
 })
 
 module.exports = { Category, Event, Order, Saved_event, User };
