@@ -9,7 +9,7 @@
     "filename": "01-yqm-country-fest-2023.png",
     "price": 300,
     "description":
-      ""
+      "KEITH URBAN on Friday and THOMAS RHETT on SATURDAY"
   },
   {
     "title": "Fredericton Craft Beer Festival 2023",
@@ -20,7 +20,7 @@
     "filename": "02-fredericton-craft-beer-festival-2023.png",
     "price": 100,
     "description":
-        "Join us for the 10th Annual Fredericton Craft Beer Festival on March 11 th, 2023, at the Fredericton Convention Centre. We will be sampling some of the best beers around and are pleased to announce that we will have a great selection of beers/ciders/mead for you to choose from on your sampling journey! We will showcase over 45 breweries, cideries and a meadery. Need a room? The Venue - Located in the heart of a charming and pristine capital city, the Fredericton Convention Centre is New Brunswick’s premier meeting destination, offering a warm Maritime experience in a modern, chic building filled with natural light, a stone’s throw from the majestic Saint John River."
+        "Join us for the 10th Annual Fredericton Craft Beer Festival on March 11 th, 2023, at the Fredericton Convention Centre. We will be sampling some of the best beers around and are pleased to announce that we will have a great selection of beers/ciders/mead for you to choose from on your sampling journey! We will showcase over 45 breweries, cideries and a meadery. Need a room? The Venue - Located in the heart of a charming and pristine capital city, the Fredericton Convention Centre is New Brunswick's premier meeting destination, offering a warm Maritime experience in a modern, chic building filled with natural light, a stone's throw from the majestic Saint John River."
   },
   {
     "title": "Down East Brew Festival 2023",
@@ -35,22 +35,22 @@
   },
   {
     "title": "March Brack Cooking Camp",
-    "present_by": "Sam’s Second Spoon",
+    "present_by": "Sam's Second Spoon",
     "dateandtime": "2023-03-06 12:00:00",
     "location": "303 Woodlawn Lane New Maryland, NB E3C 1J4",
     "category_id": 2,
     "filename": "04-march-brack-cooking-camp.png",
     "price": 50,
     "description":
-      "Sam’s Second Spoon is organizing cooking classes for young kids aged 10 to 15 during the March break.These 5 days are designed to show kids that cooking can be fun and a factor in building their personalities.Our main objectives are to teach kids how to communicate, develop their sense of taste, and create their blends. But on top of that, and most importantly, have fun."
+      "Sam's Second Spoon is organizing cooking classes for young kids aged 10 to 15 during the March break.These 5 days are designed to show kids that cooking can be fun and a factor in building their personalities.Our main objectives are to teach kids how to communicate, develop their sense of taste, and create their blends. But on top of that, and most importantly, have fun."
   },
   {
     "title": "Stone Soup Society",
     "present_by": "Greener Village",
     "dateandtime": "2023-02-27 18:00:00",
     "location": "Fredericton Food Bank 686 Riverside Drive Fredericton, NB E3A 8C2",
-    "category_id": 1,
-    "filename": "05-stone-soup-society",
+    "category_id": 2,
+    "filename": "05-stone-soup-society.png",
     "price": 25,
     "description":
       "In person activity at the Greener Village Learning Kitchen, 686 Riverside Drive Fredericton NB. Seeking individuals to help prepare large batches of soup to be portioned out in our Food Bank and given out Free to our Fredericton Food Bank Clients."
@@ -61,7 +61,7 @@
     "dateandtime": "2023-03-10 18:00:00",
     "location": "225 Woodstock Road Fredericton, NB E3B 2H8",
     "category_id": 2,
-    "filename": "06-the-ultimate-craft-beer-dinner",
+    "filename": "06-the-ultimate-craft-beer-dinner.png",
     "price": 100,
     "description":
       "Vote on your favorite brewery, and we will present them with a trophy!"
@@ -72,7 +72,7 @@
     "dateandtime": "2023-06-08 18:00:00",
     "location": "Various locations, Fredericton, NB",
     "category_id": 1,
-    "filename": "07-rock-fest-19+",
+    "filename": "07-rock-fest-19+.png",
     "price": 0,
     "description":
       "A roots festival taking place in several small venues including living rooms, cafes, restaurants, parks, street corners, or anywhere else. Acts from across the country and beyond; full range or solo, duo and bands, poetry... anything goes."
@@ -83,7 +83,7 @@
     "dateandtime": "2023-07-08 14:30:00" ,
     "location": "Bill Thorpe Walking Bridge, Fredericton, NB",
     "category_id": 2,
-    "filename": "09-beer-on-the-bridge",
+    "filename": "09-beer-on-the-bridge.png",
     "price": 0,
     "description":
       "The Rotary Club of Fredericton Sunrise and SNAP! A Burlesque Revue welcome you to join us on the Bill Thorpe Walking Bridge in Fredericton for a festival of the spirits! Give back to your community while you watch the sun go down over the mighty Saint John river. Come support Rotary's community projects while enjoying mead, beer and cider, live music, and food from some of New Brunswick's best! Beer, cider and mead are included, as is a custom sampling glass. Come support Rotary's community projects while enjoying mead, beer and cider, live music, and food from some of New Brunswick's best! Beer, cider and mead are included, as is a custom BotB sampling glass that will be provided to you on entry. Sample one or sample them all, it's up to you. (Please drink responsibly!)."
@@ -94,10 +94,10 @@
     "dateandtime": "2023-07-05 14:30:00",
     "location": "Secret Location, Grande-Digue, NB",
     "category_id": 1,
-    "filename": "10-ballet-by-the-ocean-summer-series",
+    "filename": "10-ballet-by-the-ocean-summer-series.png",
     "price": 100,
     "description":
-      "Allow your senses to guide you in this one-of-a-kind exclusive experience. Come immerse yourself in the scenic backdrop of one of New Brunswick’s most stunning natural habitats while enjoying the astounding beauty of the award-winning Atlantic Ballet and savouring incredible local food pairings by celebrated New Brunswick chefs."
+      "Allow your senses to guide you in this one-of-a-kind exclusive experience. Come immerse yourself in the scenic backdrop of one of New Brunswick's most stunning natural habitats while enjoying the astounding beauty of the award-winning Atlantic Ballet and savouring incredible local food pairings by celebrated New Brunswick chefs."
   },
   {
     "title": "Cultural Expressions Festival",
@@ -105,7 +105,7 @@
     "dateandtime": "2023-06-24 14:30:00",
     "location": "Capital Exhibit Centre, 355 Smythe Street, Fredericton, NB",
     "category_id": 1,
-    "filename": "11-cultural-expressions-festival",
+    "filename": "11-cultural-expressions-festival.png",
     "price": 0,
     "description":
       "One exciting day of LIVE entertainment from around the world. Special activities for families; multicultural dance & music, international food, displays & more. Free admission."
@@ -116,7 +116,7 @@
     "dateandtime": "2023-03-09 20:30:00",
     "location": "Five and Dime, 34 Grannan Street,Saint John,NB,Canada, Saint John, Canada",
     "category_id": 1,
-    "filename": "12-songwriter-circle",
+    "filename": "12-songwriter-circle.png",
     "price": 10,
     "description":
       "Roots & Soul annual songwriter circle will make a stop in Saint John. We will have 4 artists on stage together each taking turns telling stories and playing songs. Show starts at 8:30 PM"
@@ -127,9 +127,9 @@
     "dateandtime": "2023-04-08 21:30:00",
     "location": "Imperial Theatre, 12 King Square South,Saint John,NB,Canada, Saint John, Canada",
     "category_id": 1,
-    "filename": "13.the-last-waltz-new-brunswick",
+    "filename": "13.the-last-waltz-new-brunswick.png",
     "price": 200,
     "description":
-      "New Brunswick pays tribute to one of the greatest concerts of all time – April 6/7/8, 2023. The Last Waltz New Brunswick features an all-star cast of NB artists, all backed by the East Coast’s most dedicated “The Band” band — King Harvest."
+      "New Brunswick pays tribute to one of the greatest concerts of all time - April 6/7/8, 2023. The Last Waltz New Brunswick features an all-star cast of NB artists, all backed by the East Coast's most dedicated “The Band” band — King Harvest."
   }
 ]

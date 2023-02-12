@@ -21,7 +21,6 @@ const seedDatabase = async () => {
   for(const event of eventData) {
     await Event.create({
       ...event,
-      category_id: category[Math.floor(Math.random() * category.length)].id,
     });
   }
 

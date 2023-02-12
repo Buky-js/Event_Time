@@ -1,8 +1,10 @@
 [
     {
+        "id": 1,
         "category_name": "Music"
     },
     {
+        "id": 2,
         "category_name": "Food & Drink"
     }
 ]

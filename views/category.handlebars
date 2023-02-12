@@ -1,0 +1,8 @@
+<section class="container">
+  <h3 class="gallery-name">{{category.category_name}}</h3>
+  <section class="flex-row justify-center">
+    {{#each category.events as |event|}}
+    {{> event-details}}
+    {{/each}}
+  </section>
+</section>
