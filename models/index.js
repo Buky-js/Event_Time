@@ -45,7 +45,6 @@ Event.belongsTo(Category,{
 
 Category.hasMany(Event,{
     foreignKey: 'category_id',
-    onDelete: 'CASCADE'
 })
 
 module.exports = { Category, Event, Order, Saved_event, User };

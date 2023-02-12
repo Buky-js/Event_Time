@@ -28,7 +28,7 @@ Order.init(
         },
 
         event_id: {
-            type: DataTypes.UUID,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'event',
                 key: 'id',

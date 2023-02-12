@@ -6,11 +6,11 @@ class Event extends Model { }
 Event.init(
     {
         id: {
-            type: DataTypes.UUID,
-            defaultValue: DataTypes.UUIDV4,
-            // allowNull: true,
+            type: DataTypes.INTEGER,
+            // defaultValue: DataTypes.UUIDV4,
+            allowNull: false,
             primaryKey: true,
-            // autoIncrement: true
+            autoIncrement: true
         },
 
         title: {
@@ -34,7 +34,7 @@ Event.init(
         },
 
         category_id: {
-            type: DataTypes.UUID,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'category',
                 key: 'id',
@@ -42,7 +42,7 @@ Event.init(
 
         },
 
-        file_name: {
+        filename: {
             type: DataTypes.STRING,
         },
 
@@ -51,7 +51,7 @@ Event.init(
         },
 
         description: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         }
     },
