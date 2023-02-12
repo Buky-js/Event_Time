@@ -45,7 +45,9 @@ Event.init(
         filename: {
             type: DataTypes.STRING,
         },
-
+        map: {
+            type: DataTypes.TEXT,
+        },
         price: {
             type: DataTypes.DECIMAL,
         },

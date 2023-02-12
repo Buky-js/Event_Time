@@ -162,3 +162,8 @@ img {
   align-content: flex-start;
   align-items: center;
 }
+
+iframe {
+  width:80%;
+  height:300px;
+}

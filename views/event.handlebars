@@ -1,0 +1,11 @@
+<section class="painting">
+  <img src="/images/{{event.filename}}" alt="{{event.description}}">
+  <div class="painting-details">
+    <h3>{{event.title}}</h3>
+    <p>By: {{event.present_by}}</p>
+    <p>Date and Time: {{ event.dateandtime}}</p>
+    <h4>{{event.price}}$</h4>
+    <p>{{event.location}}</p>
+    <iframe src="{{event.map}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
