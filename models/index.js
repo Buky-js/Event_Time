@@ -47,4 +47,20 @@ Category.hasMany(Event,{
     foreignKey: 'category_id',
 })
 
+User.belongsToMany(Event, {
+    through:{
+        model: Order,
+        unique: false
+    },
+    as: 'order-history'
+})
+
+Event.belongsToMany(User,{
+    through: {
+        model:Order,
+        unique:false
+    },
+    as: 'event_history'
+})
+
 module.exports = { Category, Event, Order, Saved_event, User };

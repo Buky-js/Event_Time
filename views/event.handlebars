@@ -4,8 +4,12 @@
     <h3>{{event.title}}</h3>
     <p>By: {{event.present_by}}</p>
     <p>Date and Time: {{ event.dateandtime}}</p>
-    <h4>{{event.price}}$</h4>
-    <p>{{event.location}}</p>
+    <br>
+    <h5>Ticket Price: {{event.price}}$</h5>
+    <br>
+    <p style="font-weight: 500;">{{event.description}}</p>
+    <br>
+    <p>Location: {{event.location}}</p>
     <iframe src="{{event.map}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </section>
