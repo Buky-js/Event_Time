@@ -1,32 +1,22 @@
+ 
+<section>
+      <p class="introduction">
+        Explore upcoming events in New Bruinswick with us.If you’re looking to
+        plan ahead, look no further than New Bruinswick’s year-round annual
+        events calendar <span style="color: #d416b8">Event_Now</span>
+      </p>
+    </section>
+
+<nav id="nav_event"> 
+<ul>
 {{#each categories as |category|}}
 {{> category-details}}
 {{/each}}
 
+</ul>
+</nav>
 
-
-
-
-
-<!-- Loop over each object in the projects array -->
-{{!-- {{#each categories as |category| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->      
-      <a href="/event/{{category.id}}">{{category.category_name}}</a>
-    </h2>
-    <p>
-      {{!-- <span for="img" aria-label="money">💲</span> --}}
-      <!-- Pass needed_funding value to the helper function -->
-      {{!-- <span class="dollar-amount">{{format_amount project.needed_funding}}</span> --}}
-      {{!-- needed! --}}
-    {{!-- </p>
-    {{!-- <p>Created by {{event.user.name}} on {{format_date project.date_created}}</p> --}}
-  {{!-- </div>
-  <div class="col-md-7">
-    <p>
-      {{event.description}}
-    </p>
-  </div>
-</div>
-{{/each}} --}} 
+<section>
+      <h4>Plan your event now</h4>
+      <div class="card" style="width: 50rem;" id="calendar"></div>
+</section>
