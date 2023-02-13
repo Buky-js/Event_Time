@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "bcrypt": "^5.1.0",
-    "bootstrap": "^5.2.3",
     "connect-session-sequelize": "^7.1.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
@@ -9,27 +8,8 @@
     "express-session": "^1.17.3",
     "mysql": "^2.18.1",
     "mysql2": "^3.1.2",
+    "nodemon": "^2.0.20",
     "sequelize": "^6.28.0",
     "uuid": "^9.0.0"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
-  "name": "event_time",
-  "description": "event_calendar",
-  "version": "1.0.0",
-  "main": "server.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ZairaBarry/Event_Time.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ZairaBarry/Event_Time/issues"
-  },
-  "homepage": "https://github.com/ZairaBarry/Event_Time#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.20"
   }
 }
