@@ -72,7 +72,7 @@ router.get('/event/:id', async (req, res) => {
 
       const event = dbEventData.get({ plain: true });
 
-      res.render('event', { event, loggedIn: req.session.loggedIn });
+      res.render('event', { event, logged_in: req.session.logged_in });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
