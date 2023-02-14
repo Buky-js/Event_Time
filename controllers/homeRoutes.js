@@ -76,71 +76,42 @@ router.get('/event/:id', async (req, res) => {
 // }
 );
 
-router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
-  }
-
-  res.render('login');
-});
-
-router.get('/signup', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
-  }
-
-  res.render('signup');
-});
-// Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] }
-      // include: [{ model: Project }],
-    });
-
-    const user = userData.get({ plain: true });
 
 router.get('/profile', withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Order, 
-      attributes: [
-        'user_id',
-        'event_id',
-      ],
-      
-      }],
-    });
-  
-    // const userData = await User.findByPk(req.session.user_id,{
-    //   include: [{model:Event, through: Order, as: 'order_history'}]
-    // })
-
-    const user =userData.get({ plain: true });
-    console.log(user);   
-
+  User.findByPk(req.session.user_id, {
+    attributes: { exclude: ['password'] },
+    include: [{ model: Order, 
+    attributes: [
+      'user_id',
+      'event_id',
+    ],
     
-    const orderList = user.orders;
-       
-    console.log(orderList);
-    console.log(orderList[0].event_id)
-
-    res.render('profile', {
-      ...user,
+    }],
+  })
+  .then((data)=>{
+    const datafiltered = data.get({ plain: true });
+    var eventList = [];
+    for(let i=0; i< datafiltered.orders.length; i++){
+      eventList.push(data.orders[i].event_id)
+    }
+    console.log(eventList[0]);
+    const eventData = eventList.forEach((id)=>{
+     Event.findByPk(id)
+      .then((result)=> {return result.get({ plain: true })})
+      
+    })
+    console.log(eventData)
+    return datafiltered;
+  })
+  .then((datafiltered)=>{
+        res.render('profile', {
+      ...datafiltered,
       logged_in: true
     });
-
-  } catch (err) {
+  })
+  .catch ((err)=> {
     res.status(500).json(err);
-  }
+  })
 });
 
  router.get('/login',(req, res)=>{
