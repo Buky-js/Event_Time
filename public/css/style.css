@@ -41,6 +41,11 @@ h4 {
   flex-grow: 1;
 }
 
+.profile_page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 aside {
   flex: 0;
   /* background-color: var(--tertiary); */
@@ -104,7 +109,7 @@ img {
 .painting {
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
@@ -315,6 +320,7 @@ h3 {
 	flex-direction: column;
 	justify-content: center;
 	color: #fff;
+  
 }
 .fa-android{
 	font-size:3em;

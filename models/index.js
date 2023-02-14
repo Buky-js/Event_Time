@@ -52,7 +52,7 @@ User.belongsToMany(Event, {
         model: Order,
         unique: false
     },
-    as: 'order-history'
+    
 })
 
 Event.belongsToMany(User,{
@@ -60,7 +60,7 @@ Event.belongsToMany(User,{
         model:Order,
         unique:false
     },
-    as: 'event_history'
 })
+
 
 module.exports = { Category, Event, Order, Saved_event, User };

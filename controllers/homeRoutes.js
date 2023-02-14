@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Event, User, Category, Saved_event, Order } = require('../models');
 const withAuth = require('../utils/auth');
+const { Op } = require('sequelize');
 
 router.get('/', async (req, res) => {
     try {
@@ -61,7 +62,7 @@ router.get('/event/:id', async (req, res) => {
   // if (!req.session.loggedIn) {
   //   res.redirect('/login');
   // } else {
-    // If the user is logged in, allow them to view the painting
+    // If the user is logged in, allow them to view the event
     try {
       const dbEventData = await Event.findByPk(req.params.id);
 
@@ -76,43 +77,45 @@ router.get('/event/:id', async (req, res) => {
 // }
 );
 
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+    return;
+  }
+
+  res.render('signup');
+});
 
 router.get('/profile', withAuth, async (req, res) => {
-  User.findByPk(req.session.user_id, {
-    attributes: { exclude: ['password'] },
-    include: [{ model: Order, 
-    attributes: [
-      'user_id',
-      'event_id',
-    ],
+  
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [
+        { model: Event, attributes:['id','title','dateandtime'] },
+        { model: Saved_event, attributes:['id','event_id','notes'] }
+      ],
+    }); 
+
+    var user = userData.get({ plain: true });
+    // console.log(user.events[0].title)
+    // console.log(user.saved_events[0].notes)
     
-    }],
-  })
-  .then((data)=>{
-    const datafiltered = data.get({ plain: true });
-    var eventList = [];
-    for(let i=0; i< datafiltered.orders.length; i++){
-      eventList.push(data.orders[i].event_id)
-    }
-    console.log(eventList[0]);
-    const eventData = eventList.forEach((id)=>{
-     Event.findByPk(id)
-      .then((result)=> {return result.get({ plain: true })})
-      
-    })
-    console.log(eventData)
-    return datafiltered;
-  })
-  .then((datafiltered)=>{
-        res.render('profile', {
-      ...datafiltered,
+    res.render('profile', {
+      ...user,
       logged_in: true
     });
-  })
-  .catch ((err)=> {
+
+  } catch (err) {
     res.status(500).json(err);
-  })
+  }  
 });
+
+router.get('/ticket', withAuth, async (req, res)=>{
+
+})
 
  router.get('/login',(req, res)=>{
   if (req.session.logged_in){
