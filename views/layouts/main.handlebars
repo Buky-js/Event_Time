@@ -32,18 +32,20 @@
                         {{!-- <li>
                             <a href="/create_event">Create an event</a>
                          </li> --}}
-                             
+                          
                          <li>
                           {{#if logged_in}}
-                          <a href="#" id="logout">Logout</a>
-                          {{!-- <button class="no-button" id="logout">logout</button> --}}
+                          <button id="logout" class="btn-no-style">Logout</button>
                           {{else}}
                             <a href="/login">Login</a>
                           {{/if}}
                         </li>
                         <li>
-                  
+                          {{#if logged_in}}
+                          <a href="/profile">Profile</a>                      
+                          {{else}}
                           <a href="/signup">Sign up </a>
+                          {{/if}}
                         </li>
                         
                     </ul>

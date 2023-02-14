@@ -7,17 +7,11 @@ class Order extends Model { }
 Order.init(
     {
         id: {
-            type: DataTypes.UUID,
-            defaultValue: DataTypes.UUIDV4,
-            // allowNull: true,
+            type: DataTypes.INTEGER,
+            allowNull: false,
             primaryKey: true,
-            // autoIncrement: true
-        },
-
-        amount: {
-            type: DataTypes.DECIMAL,
-
-        },
+            autoIncrement: true,
+          },
 
         user_id: {
             type: DataTypes.UUID,

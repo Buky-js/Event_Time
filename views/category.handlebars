@@ -1,8 +1,15 @@
-<section class="container">
-  <h3 class="gallery-name">{{category.category_name}}</h3>
-  <section class="flex-row justify-center">
-    {{#each category.events as |event|}}
-    {{> event-details}}
-    {{/each}}
+
+<div class="category_page">
+    <aside>
+        <header style="font-size: 1.75rem, text-align: center; color: grey; font-weigth: 500;">Plan your event now</header>
+        <div style="width: 23rem;" id="calendar"></div>
+  </aside>
+  <section class="container">
+    <h3 class="gallery-name">{{category.category_name}}</h3>
+    <section class="flex-row justify-center">
+      {{#each category.events as |event|}}
+      {{> event-details}}
+      {{/each}}
+    </section>  
   </section>
-</section>
+</div>
