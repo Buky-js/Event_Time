@@ -1,77 +1,77 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
- 
-  <title>Event Time</title>
-  
-   {{!-- <link rel="stylesheet" type="text/css" href="/css/login.css"> --}}
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-      <header>
-        <div class="card text-bg-dark ">
-            <img
-          src="/images/Holi-Splash-Festival.jpg"
-          class="card-img"
-          height="400"
-          weight="100"
-          alt=".." />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/jass.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <title>Event Time</title>
+    {{! <link rel="stylesheet" type="text/css" href="/css/login.css"> }}
+  </head>
+
+  <body>
+    <header>
+      <div class="card text-bg-dark">
+        <img class ="background_image"
+          src="/images/color_splash2.jpg" width="100%" height="400px" alt="image of color festival"
+        />
         <div class="card-img-overlay">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="/">Home</a>
-                         </li>
-                        {{!-- <li>
+          <nav>
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              {{! <li>
                             <a href="/create_event">Create an event</a>
-                         </li> --}}
-                          
-                         <li>
-                          {{#if logged_in}}
-                          <button id="logout" class="btn-no-style">Logout</button>
-                          {{else}}
-                            <a href="/login">Login</a>
-                          {{/if}}
-                        </li>
-                        <li>
-                          {{#if logged_in}}
-                          <a href="/profile">Profile</a>                      
-                          {{else}}
-                          <a href="/signup">Sign up </a>
-                          {{/if}}
-                        </li>
-                        
-                    </ul>
-                </nav>
-              <p class="card-text text-center">Event_Now</p>
-            
-            </div>
-          </div>
-        </header>
-  
-  <main>
-      {{{body}}}
-  </main>
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+                         </li> }}
 
-  
-<footer class="footer" id="footer_container">
+              <li>
+                {{#if logged_in}}
+                  <button id="logout" class="btn-no-style">Logout</button>
+                {{else}}
+                  <a href="/login">Login</a>
+                {{/if}}
+              </li>
+              <li>
+                {{#if logged_in}}
+                  <a href="/profile">Profile</a>
+                {{else}}
+                  <a href="/signup">Sign up </a>
+                {{/if}}
+              </li>
+
+            </ul>
+          </nav>
+          <p class="card-text text-center">Event_Now</p>
+
+        </div>
+      </div>
+    </header>
+
+    <main>
+      {{{body}}}
+    </main>
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+
+    <footer class="footer" id="footer_container">
       <div>
         <a href="https://github.com/ZairaBarry/Event_Time"> Contact Us </a>
       </div>
     </footer>
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js"></script>
-  <script src="/js/script.js"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js"
+    ></script>
+    <script src="/js/script.js"></script>
+  </body>
 
 </html>
