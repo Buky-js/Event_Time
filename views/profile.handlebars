@@ -30,12 +30,13 @@
         <h3>Saved Event</h3>      
 
             {{#each saved_events as |saved_event|}}
-        <li class="d-flex"><a href="/event/{{saved_event.event_id}}">{{saved_event.notes}} </a><button class="btn-danger" data-id="{{saved_event.id}}">DELETE</button></li>
+        <li class="d-flex"><a href="/event/{{saved_event.event_id}}">{{saved_event.title}} </a><div> 
+           
+        </div><button class="btn-danger" data-id="{{saved_event.id}}">DELETE</button></li>
 
         {{/each}}
       </div>
-      {{/if}}    
-    
+      {{/if}}        
 </div>
 </div>
 

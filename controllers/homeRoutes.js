@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Event, User, Category, Saved_event, Order } = require('../models');
 const withAuth = require('../utils/auth');
-const { Op } = require('sequelize');
 
 router.get('/', async (req, res) => {
     try {
@@ -59,9 +58,9 @@ router.get('/category/:id', async (req, res) => {
   // GET one event
 router.get('/event/:id', async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
-  // if (!req.session.loggedIn) {
-  //   res.redirect('/login');
-  // } else {
+  if (!req.session.logged_in) {
+    res.redirect('/login');
+  } else {
     // If the user is logged in, allow them to view the event
     try {
       const dbEventData = await Event.findByPk(req.params.id);
@@ -74,7 +73,7 @@ router.get('/event/:id', async (req, res) => {
       res.status(500).json(err);
     }
   }
-// }
+}
 );
 
 router.get('/signup', (req, res) => {
@@ -95,7 +94,7 @@ router.get('/profile', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [
         { model: Event, attributes:['id','title','dateandtime'] },
-        { model: Saved_event, attributes:['id','event_id','notes'] }
+        { model: Saved_event, attributes:['id','event_id','title','notes'] }
       ],
     }); 
 
@@ -113,13 +112,10 @@ router.get('/profile', withAuth, async (req, res) => {
   }  
 });
 
-router.get('/ticket', withAuth, async (req, res)=>{
-
-})
 
  router.get('/login',(req, res)=>{
   if (req.session.logged_in){
-    res.redirect('/profile');
+    res.redirect('/');
     return;
   }
   res.render('login')

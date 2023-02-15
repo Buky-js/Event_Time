@@ -4,6 +4,8 @@ const withAuth = require('../../utils/auth');
 
 
 router.post('/', withAuth, async (req,res)=>{
+
+   
  try{
     const newOrder = await Order.create({
         ...req.body,
@@ -14,9 +16,6 @@ router.post('/', withAuth, async (req,res)=>{
     res.status(400).json(err);
  }
 })
-// router.post('/', withAuth, async (req,res)=>{
-// router.delete('/:id', withAuth, async (req, res)=> {
 
-// })
 
 module.exports = router;

@@ -2,22 +2,21 @@
 const saveButtonHandler = async (event) => {
   
   const event_id = event.target.getAttribute('data-id');  
-  const notes = event.target.getAttribute('data-title')
+  const title = event.target.getAttribute('data-title')
   console.log(event_id)
   if (event.target.hasAttribute('data-id')) {
    
 
     const response = await fetch(`/api/savevents`, {
       method: 'POST',
-      body: JSON.stringify({event_id,notes}),
+      body: JSON.stringify({event_id,title}),
       headers: {
         'Content-Type':'application/json',
       }
     });
 
     if (response.ok) {
-      // document.location.replace('/profile');
-      console.log('you saved event.')
+      document.location.replace('/profile');
     } else {
       alert(response.statusText);
     }
@@ -26,6 +25,7 @@ const saveButtonHandler = async (event) => {
 
 const ticketButtonHandler = async (event) => {
   const event_id = event.target.getAttribute('data-id');
+  const event_title = event.target.getAttribute('data-title')
   if (event.target.hasAttribute('data-id')) {
     const response = await fetch(`/api/orders`, {
       method: 'POST',
@@ -36,7 +36,7 @@ const ticketButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      console.log('you got 1 ticket.')
+      document.location.replace('/profile');
     } else {
       alert(response.statusText);
     }

@@ -6,5 +6,13 @@
     {
         "id": 2,
         "category_name": "Food & Drink"
+    },
+    {
+        "id": 3,
+        "category_name": "Sport"
+    },
+    {
+        "id": 4,
+        "category_name": "Job Fairs"
     }
 ]
