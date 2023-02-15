@@ -23,14 +23,13 @@ Event.init(
         },
 
         dateandtime: {
-            type: DataTypes.STRING,
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,           
             allowNull: false,
         },
 
         location: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
 
         category_id: {

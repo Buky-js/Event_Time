@@ -11,11 +11,11 @@ User.init(
 
     {
         id: {
-            type: DataTypes.UUID,
-            defaultValue: DataTypes.UUIDV4,
+            type: DataTypes.INTEGER,
+            // defaultValue: DataTypes.UUIDV4,
             // allowNull: true,
             primaryKey: true,
-            // autoIncrement: true
+            autoIncrement: true
         },
 
         name: {

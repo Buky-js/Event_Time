@@ -14,6 +14,11 @@ Saved_event.init(
             // autoIncrement: true
         },
 
+        title: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+
         event_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -21,13 +26,15 @@ Saved_event.init(
                 key: 'id',
             },
         },
+
         user_id: {
-            type: DataTypes.UUID,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'user',
                 key: 'id',
             },
         },        
+        
         notes: {
             type: DataTypes.STRING
         }
