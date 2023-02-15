@@ -119,6 +119,18 @@ router.get('/profile', withAuth, async (req, res) => {
     return;
   }
   res.render('login')
- })
+ });
+
+ router.get('/newevent', (req, res) => {
+  // if (!req.session.logged_in){
+  //   res.render('login');
+  //  return;
+  // }
+  res.render('newevent', {
+    logged_in: true
+  });
+}
+
+);
 
 module.exports = router;
