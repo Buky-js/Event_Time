@@ -41,6 +41,12 @@
                 {{/if}}
               </li>
               <li>
+                           {{#if logged_in}}
+                           
+                           <a href="/newevent">Create Event</a>
+                           {{/if}}
+                        </li>
+              <li>
                 {{#if logged_in}}
                   <a href="/profile">Profile</a>
                 {{else}}

@@ -6,7 +6,7 @@ const signupFormHandler = async (e) => {
     const password = document.querySelector('#password-signup').value.trim();
   
     if (name && email && password) {
-      const response = await fetch('/api/users', { // change to post route that creates a user account
+      const response = await fetch('api/users', { // change to post route that creates a user account
         method: 'POST',
         body: JSON.stringify({ name, email, password }),
         headers: { 'Content-Type': 'application/json' },
