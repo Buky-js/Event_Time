@@ -19,6 +19,7 @@
 
   <body>
     <header>
+      {{!-- Changed background image between concert and festival --}}
       {{#if logged_in}}
       {{>subheader1}}
       {{else}}
@@ -29,6 +30,7 @@
             <li>
               <a href="/">Home</a>
             </li>              
+            {{!-- when user login, change nav items --}}
               {{#if logged_in}}
                 <li><a href="/newevent">Create Event</a></li>
 
@@ -47,15 +49,6 @@
           <h1 class="card-text text-center">Event_Time</h1>
 </div>
 </header>
-
-
-      {{!-- <div class="card text-bg-dark"> --}}
-        {{!-- <img class ="background_image"
-          src="/images/color_splash2.jpg" style="width=200px; height=150px; overflow: hidden" alt="image of color festival"
-        /> --}}
-        
-        {{!-- <div class="card-img-overlay"> --}}          
-          {{!-- <p class="card-text text-center">Event_Now</p> --}}
     <main>
       {{{body}}}
     </main>

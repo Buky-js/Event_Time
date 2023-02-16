@@ -235,11 +235,13 @@ height: 77px;
 
 font-family: 'Inter';
 font-style: normal;
-font-weight: 400;
+font-weight: bolder;
 font-size: 64px;
 line-height: 77px;
 color: #FFFFFF;
-
+background: linear-gradient(
+            to right, #f32170, #ff6b08,
+             #cf23cf, #eedd44);
 mix-blend-mode: overlay;
 } 
 
