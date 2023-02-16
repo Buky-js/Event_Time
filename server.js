@@ -31,6 +31,13 @@ const sess = {
 
 app.use(session(sess));
 
+//if comparison statement for category
+const Handlebars = require('handlebars');
+Handlebars.registerHelper('isdefined', function (value, value2) {
+  if(value == value2) {
+      return this;
+  }
+});
 
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);

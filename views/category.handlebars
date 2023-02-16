@@ -1,8 +1,19 @@
 
-<div class="category_page">
+{{#if (isdefined category.id 1)}}
+<div class="category_page" style="background-image:url('https://source.unsplash.com/1600x1600/?concerts') ;">
+{{/if}}
+{{#if (isdefined category.id 2)}}
+<div class="category_page" style="background-image:url('https://source.unsplash.com/1600x1600/?drinks') ;">
+{{/if}}
+{{#if (isdefined category.id 3)}}
+<div class="category_page" style="background-image:url('https://source.unsplash.com/1600x1600/?sports') ;">
+{{/if}}
+{{#if (isdefined category.id 4)}}
+<div class="category_page" style="background-image:url('https://source.unsplash.com/1600x1600/?career') ;">
+{{/if}}
     <aside>
         <header style="font-size: 1.75rem, text-align: center; color: grey; font-weigth: 500;">Plan your event now</header>
-        <div style="width: 23rem;" id="calendar"></div>
+        <div style="width: 22rem;" id="calendar"></div>
   </aside>
   <section class="container">
     <h3 class="gallery-name">{{category.category_name}}</h3>
