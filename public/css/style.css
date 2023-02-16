@@ -16,12 +16,9 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: flex-start;
-  /* background-color: var(--quatrinary); */
-  background-color: rgb(248, 233, 248);
-  
+  background-color: rgb(248, 233, 248);  
 }
 
- 
 
 a:visited {
   color: inherit;
@@ -90,6 +87,11 @@ nav a:hover {
   font-size: 70%;
   transition: color 0.1s;
   margin-left: 16px;
+  color: white;
+}
+#logout:hover{
+  color: var(--secondary);
+  text-decoration: underline;
 }
 .no-button {
   background: none;
@@ -281,9 +283,9 @@ h3 {
 }
 
 .footer {
-  margin-top: 200px;
+  margin-top: 20px;
   text-align: center;
-  padding: 50px;
+  padding: 10px;
 }
 
 .introduction {
@@ -327,7 +329,7 @@ h3 {
 	font-size:3em;
 }
 @media screen and (max-width: 640px) {
-	.main-content{width: 90%;}
+	.main-content {width: 90%;}
 	.company__info{
 		display: none;
 	}
@@ -335,10 +337,13 @@ h3 {
 		border-top-left-radius:20px;
 		border-bottom-left-radius:20px;
 	}
+  #nav_event{display: flex; flex-direction: column;}
 }
 @media screen and (min-width: 642px) and (max-width:800px){
-	.main-content{width: 70%;}
+	.main-content {width: 70%;}
+  #nav_event{display: flex; flex-direction: column;}
 }
+
 .row > h2{
 	color:#008080;
 }
