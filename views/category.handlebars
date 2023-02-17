@@ -1,4 +1,6 @@
 
+ <!-- Conditionally render different background images based on category-->
+
 {{#if (isdefined category.id 1)}}
 <div class="category_page" style="background-image:url('https://source.unsplash.com/1600x1800/?concerts') ;">
 {{/if}}
@@ -18,6 +20,7 @@
   <section class="container">
     <h3 class="gallery-name">{{category.category_name}}</h3>
     <section class="flex-row justify-center">
+ <!-- Loop over each object in the events array based on category -->
       {{#each category.events as |event|}}
       {{> event-details}}
       {{/each}}

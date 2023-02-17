@@ -20,6 +20,7 @@
 
   <body>
     <header>
+      <!-- Conditionally render different images based on the image urls-->
       {{#if logged_in}}
       {{>subheader1}}
       {{else}}
@@ -50,8 +51,10 @@
 </header>
 
     <main>
+        <!-- Render the sub layout -->
       {{{body}}}
     </main>
+    <!-- Render script for logged in users only -->
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
     {{/if}}

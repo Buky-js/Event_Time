@@ -1,61 +1,74 @@
 const router = require('express').Router();
-const { Event, User, Category, Saved_event, Order } = require('../models');
+const {
+  Event,
+  User,
+  Category,
+  Saved_event,
+  Order
+} = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-    try {
-      const dbCategoryData = await Category.findAll({
-        include: [
-          {
-            model: Event,
-            atrributes: ['title', 'description'],
-          },
-        ],
-      });
+  try {
+    // get all categories and JOIN with event data
+    const dbCategoryData = await Category.findAll({
+      include: [{
+        model: Event,
+        atrributes: ['title', 'description'],
+      }, ],
+    });
 
-      const categories = dbCategoryData.map((category)=>
-      category.get({plain:true})
-      );
-      res.render('homepage', {
-        categories,
-        logged_in: req.session.logged_in,
-      });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
+    // Serialize data so the template can read it
+    const categories = dbCategoryData.map((category) =>
+      category.get({
+        plain: true
+      })
+    );
+
+    // Pass serialized data and session flag into template
+    res.render('homepage', {
+      categories,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 
 });
 
 router.get('/category/:id', async (req, res) => {
-    try {
-      const dbCategoryData = await Category.findByPk(req.params.id, {
-        include: [
-          {
-            model: Event,
-            attributes: [
-              'id',
-              'title',
-              'present_by',
-              'dateandtime',
-              'location',
-              'description',
-              'price',
-              'filename',
-              'map',
-            ],
-          },
+  try {
+    const dbCategoryData = await Category.findByPk(req.params.id, {
+      include: [{
+        model: Event,
+        attributes: [
+          'id',
+          'title',
+          'present_by',
+          'dateandtime',
+          'location',
+          'description',
+          'price',
+          'filename',
+          'map',
         ],
-      });
-      const category = dbCategoryData.get({ plain: true });
-      res.render('category', { category, logged_in: req.session.logged_in });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  });
+      }, ],
+    });
+    const category = dbCategoryData.get({
+      plain: true
+    });
+    res.render('category', {
+      category,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
-  // GET one event
+// GET one event
 router.get('/event/:id', async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   if (!req.session.logged_in) {
@@ -65,16 +78,20 @@ router.get('/event/:id', async (req, res) => {
     try {
       const dbEventData = await Event.findByPk(req.params.id);
 
-      const event = dbEventData.get({ plain: true });
+      const event = dbEventData.get({
+        plain: true
+      });
 
-      res.render('event', { event, logged_in: req.session.logged_in });
+      res.render('event', {
+        event,
+        logged_in: req.session.logged_in
+      });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
     }
   }
-}
-);
+});
 
 router.get('/signup', (req, res) => {
   // If the user is already logged in, redirect the request to another route
@@ -86,22 +103,31 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+// Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
-  
+
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [
-        { model: Event, attributes:['id','title','dateandtime'] },
-        { model: Saved_event, attributes:['id','event_id','title','notes'] }
+      attributes: {
+        exclude: ['password']
+      },
+      include: [{
+          model: Event,
+          attributes: ['id', 'title', 'dateandtime']
+        },
+        {
+          model: Saved_event,
+          attributes: ['id', 'event_id', 'title', 'notes']
+        }
       ],
-    }); 
+    });
 
-    var user = userData.get({ plain: true });
-    // console.log(user.events[0].title)
-    // console.log(user.saved_events[0].notes)
-    
+    var user = userData.get({
+      plain: true
+    });
+
+
     res.render('profile', {
       ...user,
       logged_in: true
@@ -109,27 +135,25 @@ router.get('/profile', withAuth, async (req, res) => {
 
   } catch (err) {
     res.status(500).json(err);
-  }  
+  }
 });
 
 
- router.get('/login',(req, res)=>{
-  if (req.session.logged_in){
+router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
     res.redirect('/');
     return;
   }
   res.render('login')
- });
+});
 
- router.get('/newevent', (req, res) => {
-  // if (!req.session.logged_in){
-  //   res.render('login');
-  //  return;
-  // }
-  res.render('newevent', {
-    logged_in: true
-  });
-}
+// route for future development
+router.get('/newevent', (req, res) => {
+   
+    res.render('newevent', {
+      logged_in: true
+    });
+  }
 
 );
 
