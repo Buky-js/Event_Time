@@ -1,10 +1,8 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
-// const {v4:uuid} = require('uuid')
 
-class Category extends Model { }
-Category.init(
-    {
+class Category extends Model {}
+Category.init({
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -17,8 +15,6 @@ Category.init(
             allowNull: false,
         }
     },
-
-
     {
         sequelize,
         timestamps: false,

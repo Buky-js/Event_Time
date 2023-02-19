@@ -12,7 +12,6 @@ User.init(
     {
         id: {
             type: DataTypes.INTEGER,
-            // defaultValue: DataTypes.UUIDV4,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
