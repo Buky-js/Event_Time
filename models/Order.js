@@ -1,17 +1,16 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Order extends Model { }
+class Order extends Model {}
 
 
-Order.init(
-    {
+Order.init({
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
-          },
+        },
 
         user_id: {
             type: DataTypes.INTEGER,

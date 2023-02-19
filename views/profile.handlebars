@@ -14,7 +14,7 @@
         {{#if events.length}}
             
         <h3>Your Event Tickets</h3>      
-
+ <!-- Loop over each object in the events array -->
             {{#each events as |event|}}
         <li><a href="/event/{{event.id}}">{{event.title}} </a> <p>Date and Time: <br> {{event.dateandtime}}</p> </li>
 
@@ -28,7 +28,7 @@
         
             
         <h3>Saved Event</h3>      
-
+ <!-- Loop over each object in the saved_events array -->
             {{#each saved_events as |saved_event|}}
         <li class="d-flex"><a href="/event/{{saved_event.event_id}}">{{saved_event.title}} </a><div> 
            
