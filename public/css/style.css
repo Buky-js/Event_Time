@@ -318,7 +318,7 @@ h3 {
 	display: flex;
 }
 .company__info{
-	background-color: #008080;
+	background-color: #00feee;
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
 	display: flex;
@@ -377,6 +377,3 @@ form{
 	color:#fff;
 }
 
-footer {
-  margin-top: 200px;
-}

@@ -39,7 +39,7 @@ MIT License
 
 ## Collaborators
 
-* Yel Aung
+* Yel Zaw Aung
 * Zaira Barry
 * Olubukola Abiona
 
