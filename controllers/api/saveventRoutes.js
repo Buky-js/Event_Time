@@ -25,7 +25,7 @@ router.delete('/:id', withAuth, async (req, res)=> {
       });
   
       if (!delData) {
-        res.status(404).json({ message: 'No project found with this id!' });
+        res.status(404).json({ message: 'No event found with this id!' });
         return;
       }
   
@@ -35,4 +35,22 @@ router.delete('/:id', withAuth, async (req, res)=> {
     }
 })
 
+router.put('/:id', withAuth, async (req, res)=> {
+ console.log('data is here')
+  try {
+    const note = await Saved_event.update(
+      {
+        notes: req.body.notes,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    res.status(200).json(note);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 module.exports = router;

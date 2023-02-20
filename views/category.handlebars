@@ -1,18 +1,36 @@
 
+<div></div>
+
+
  <!-- Conditionally render different background images based on category-->
 
 {{#if (isdefined category.id 1)}}
-<div class="category_page" style="background-image:url('https://source.unsplash.com/1600x1600/?concerts'); padding-top: 20px; padding-bottom: 20px;">
+<div style="background-image:url('https://source.unsplash.com/1600x1600/?concerts'); padding-bottom: 20px;">
+<div class="btn-group">
+  {{#each category.categoryLists as |list|}}
+  <button type="button" class="category_link" ><a href="/category/{{list.id}}">{{list.name}}</a></button>
+  {{/each}}
+</div>
 {{/if}}
 {{#if (isdefined category.id 2)}}
-<div class="category_page" style="background-image:url('https://source.unsplash.com/1600x1600/?drinks') ; padding-top: 20px; padding-bottom: 20px;">
+<div  style="background-image:url('https://source.unsplash.com/1600x1600/?drinks') ; padding-bottom: 20px;">
+  {{#each category.categoryLists as |list|}}
+  <button type="button" class="category_link" ><a href="/category/{{list.id}}">{{list.name}}</a></button>
+  {{/each}}
 {{/if}}
 {{#if (isdefined category.id 3)}}
-<div class="category_page" style="background-image:url('https://source.unsplash.com/1600x1600/?sports') ; padding-top: 20px; padding-bottom: 20px;">
+<div style="background-image:url('https://source.unsplash.com/1600x1600/?sports') ; padding-bottom: 20px;">
+  {{#each category.categoryLists as |list|}}
+  <button type="button" class="category_link" ><a href="/category/{{list.id}}">{{list.name}}</a></button>
+  {{/each}}
 {{/if}}
 {{#if (isdefined category.id 4)}}
-<div class="category_page" style="background-image:url('https://source.unsplash.com/1600x1600/?career') ; padding-top: 20px; padding-bottom: 20px;">
+<div style="background-image:url('https://source.unsplash.com/1600x1600/?career') ; padding-bottom: 20px;">
+  {{#each category.categoryLists as |list|}}
+  <button type="button" class="category_link" ><a href="/category/{{list.id}}">{{list.name}}</a></button>
+  {{/each}}
 {{/if}}
+<div class="category_page" >
     <aside>
         <header style="font-size: 1.75rem, text-align: center; color: grey; font-weigth: 500;">Plan your event now</header>
         <div style="width: 22rem;" id="calendar"></div>
@@ -26,4 +44,5 @@
       {{/each}}
     </section>  
   </section>
+  </div>
 </div>

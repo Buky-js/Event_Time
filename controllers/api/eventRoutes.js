@@ -13,7 +13,7 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
-
+// For future development
 router.delete('/:id', withAuth, async (req, res) => {
 
 })

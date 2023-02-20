@@ -1,3 +1,4 @@
+<div style="background-image: url('https://source.unsplash.com/1600x1600/?happiness');">
 <div class="row profile_page">
   <div>
     <h2 style="text-align: center;">Welcome, {{name}}!</h2>
@@ -17,27 +18,35 @@
  <!-- Loop over each object in the events array -->
             {{#each events as |event|}}
         <li><a href="/event/{{event.id}}">{{event.title}} </a> <p>Date and Time: <br> {{event.dateandtime}}</p> </li>
-
         {{/each}}
       </div>
       {{/if}}      
     
 
     {{#if saved_events.length}}
-      <div class="col del_event">
-        
-            
+      <div class="col del_event">    
         <h3>Saved Event</h3>      
  <!-- Loop over each object in the saved_events array -->
             {{#each saved_events as |saved_event|}}
-        <li class="d-flex"><a href="/event/{{saved_event.event_id}}">{{saved_event.title}} </a><div> 
-           
-        </div><button class="btn-danger" data-id="{{saved_event.id}}">DELETE</button></li>
-
+        <div>
+          <li><a href="/event/{{saved_event.event_id}}">{{saved_event.title}}</a></li>
+          <p>Note: {{saved_event.notes}}</p>
+          <form>
+            <label for="">Add Note</label>
+            <input type="text" id="note" data-note="{{saved_event.id}}">
+            <input type="submit">
+          </form>
+          {{!-- <div>            
+            <input type="submit" id="notes" name="notes" data-note="{{saved_event.id}}" rows="2" cols="30"></input>
+            <button class="btn-secondary btn-sm notes" >Add Notes</button>
+          </div> --}}
+          <button class="btn-secondary btn-sm btn-danger" data-id="{{saved_event.id}}">DELETE</button>
+        </div>
         {{/each}}
       </div>
       {{/if}}        
 </div>
 </div>
-
+</div>
+</div>
 <script src="../js/delevent.js"></script>

@@ -55,9 +55,19 @@ router.get('/category/:id', async (req, res) => {
         ],
       }, ],
     });
-    const category = dbCategoryData.get({
+    var category = dbCategoryData.get({
       plain: true
     });
+
+    const dbCategories = await Category.findAll();  
+    var categories=[];
+    for(let i=0; i < dbCategories.length; i++){
+      if(dbCategories[i].dataValues.id!==category.id){
+        categories.push({id:dbCategories[i].dataValues.id, name:dbCategories[i].dataValues.category_name })
+      }
+    }
+    category['categoryLists'] = categories;
+
     res.render('category', {
       category,
       logged_in: req.session.logged_in
