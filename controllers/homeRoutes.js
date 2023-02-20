@@ -169,13 +169,11 @@ router.get('/login', (req, res) => {
 });
 
 // route for future development
-router.get('/newevent', (req, res) => {
+// router.get('/newevent', (req, res) => {
    
-    res.render('newevent', {
-      logged_in: true
-    });
-  }
-
-);
+//     res.render('newevent', {
+//       logged_in: true
+//     });
+//   });
 
 module.exports = router;
