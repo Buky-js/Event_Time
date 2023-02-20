@@ -38,6 +38,24 @@ h4 {
   flex-grow: 1;
 }
 
+.category_link{
+  background-color: #2d3e50;
+  color: #d9e9e8;
+  
+  transition: all .5s ease;
+  border: 1px solid #008080;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+
+  text-align: center;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1rem;
+
+  line-height: 1.5;
+}
 .profile_page {
   display: flex;
   flex-wrap: wrap;
@@ -115,6 +133,7 @@ img {
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 .painting-details {
@@ -330,7 +349,6 @@ h3 {
 .fa-android{
 	font-size:3em;
 }
-
 
 .row > h2{
 	color:#008080;

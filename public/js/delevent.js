@@ -21,3 +21,37 @@ const delButtonHandler = async (event) => {
 document
   .querySelector('.del_event')
   .addEventListener('click', delButtonHandler);
+
+  async function editNoteHandler(event) {
+    event.preventDefault();
+    console.log('clicked')
+    if (event.target.hasAttribute('data-note')) {
+    
+    
+    console.log(event)
+    
+    const savedevent_id = event.target.getAttribute('data-note');
+    const notes = document.getElementById(`note${savedevent_id}`).value;
+    console.log("NOtes",notes)
+    console.log("Saved event ID",savedevent_id)
+
+    const response = await fetch(`/api/savevents/${savedevent_id}`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        notes,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  console.log(response)
+
+    if (response.ok) {
+      // document.location.replace(`/profile`);
+    } else {
+      alert('Failed to update note');
+    }
+  }
+  }
+  
+  document.querySelector('.del_event').addEventListener('submit', editNoteHandler);

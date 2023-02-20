@@ -36,7 +36,7 @@ router.get('/', async (req, res) => {
   }
 
 });
-
+// Route to show individual Category Page
 router.get('/category/:id', async (req, res) => {
   try {
     const dbCategoryData = await Category.findByPk(req.params.id, {
@@ -55,9 +55,20 @@ router.get('/category/:id', async (req, res) => {
         ],
       }, ],
     });
-    const category = dbCategoryData.get({
+    var category = dbCategoryData.get({
       plain: true
     });
+
+//Get Category list to show in nav bar for user to click and go other categories
+    const dbCategories = await Category.findAll();  
+    var categories=[];
+    for(let i=0; i < dbCategories.length; i++){
+      if(dbCategories[i].dataValues.id!==category.id){
+        categories.push({id:dbCategories[i].dataValues.id, name:dbCategories[i].dataValues.category_name })
+      }
+    }
+    category['categoryLists'] = categories;
+
     res.render('category', {
       category,
       logged_in: req.session.logged_in
@@ -93,6 +104,7 @@ router.get('/event/:id', async (req, res) => {
   }
 });
 
+// Render signup page
 router.get('/signup', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
@@ -119,14 +131,23 @@ router.get('/profile', withAuth, async (req, res) => {
         {
           model: Saved_event,
           attributes: ['id', 'event_id', 'title', 'notes']
-        }
+        },
       ],
     });
 
     var user = userData.get({
       plain: true
     });
-
+    
+//Get Category list to show in nav bar for user to click and go other categories
+    const dbCategories = await Category.findAll();  
+    // console.log(dbCategories)
+    var categories=[];
+    for(let i=0; i < dbCategories.length; i++){
+        categories.push({id:dbCategories[i].dataValues.id, name:dbCategories[i].dataValues.category_name })      
+    }
+    user['categoryLists'] = categories;
+    // console.log(user)
 
     res.render('profile', {
       ...user,
@@ -141,7 +162,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/profile');
     return;
   }
   res.render('login')
