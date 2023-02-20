@@ -25,11 +25,14 @@ document
   async function editNoteHandler(event) {
     event.preventDefault();
     console.log('clicked')
+    if (event.target.hasAttribute('data-note')) {
+    
+    
     console.log(event)
-    const notes = document.getElementById('note').value;
-    console.log("NOtes",notes)
     
     const savedevent_id = event.target.getAttribute('data-note');
+    const notes = document.getElementById(`note${savedevent_id}`).value;
+    console.log("NOtes",notes)
     console.log("Saved event ID",savedevent_id)
 
     const response = await fetch(`/api/savevents/${savedevent_id}`, {
@@ -48,7 +51,7 @@ document
     } else {
       alert('Failed to update note');
     }
-    
+  }
   }
   
   document.querySelector('.del_event').addEventListener('submit', editNoteHandler);
