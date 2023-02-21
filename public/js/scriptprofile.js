@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 var currentUrl = window.location.toString();
 console.log(currentUrl);
-var newUrl = currentUrl.replace('profile/','event/')
+var newUrl = currentUrl.replace('profile','event/')
 console.log(newUrl)
 
 
