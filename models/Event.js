@@ -25,6 +25,9 @@ Event.init(
             type: DataTypes.STRING,           
             allowNull: false,
         },
+        date:{
+            type: DataTypes.DATEONLY,
+        },
 
         location: {
             type: DataTypes.STRING,

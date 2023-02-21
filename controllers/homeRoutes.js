@@ -176,4 +176,15 @@ router.get('/login', (req, res) => {
 //     });
 //   });
 
+//Get Data for Calendar
+router.get('/events', async (req, res) => {
+  try {
+      const eventData = await Event.findAll();
+      // console.log(eventData)
+      res.status(200).json(eventData);
+  } catch (err) {
+      res.status(400).json(err);
+  }
+});
+
 module.exports = router;
