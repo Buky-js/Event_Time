@@ -1,4 +1,4 @@
-<div style="background-image: url('https://source.unsplash.com/1600x1600/?happiness');">
+<div>
 <div class="row profile_page">
   <div class="btn-group">
   {{#each categoryLists as |list|}}
@@ -11,7 +11,7 @@
 <div class="category_page">
   <aside>
         <header style="font-size: 1.75rem, text-align: center; color: grey; font-weigth: 500;">Plan your event now</header>
-        <div style="width: 23rem;" id="calendar"></div>
+        <div class="calendar-category" id="calendar"></div>
   </aside>
   <div class="container">
     <div class="row gx-5  painting">
@@ -36,14 +36,10 @@
           <li><a href="/event/{{saved_event.event_id}}">{{saved_event.title}}</a></li>
           <p>Note: {{saved_event.notes}}</p>
           <form  data-note="{{saved_event.id}}">
-            <label for="">Add Note</label>
+            {{!-- <label for="">Add Note</label> --}}
             <input type="text" id="note{{saved_event.id}}">
-            <input type="submit">
-          </form>
-          {{!-- <div>            
-            <input type="submit" id="notes" name="notes" data-note="{{saved_event.id}}" rows="2" cols="30"></input>
-            <button class="btn-secondary btn-sm notes" >Add Notes</button>
-          </div> --}}
+            <input type="submit" value="Add note">
+          </form>         
           <button class="btn-secondary btn-sm btn-danger" data-id="{{saved_event.id}}">DELETE</button>
         </div>
         {{/each}}
@@ -54,3 +50,4 @@
 </div>
 </div>
 <script src="../js/delevent.js"></script>
+<script src="../js/scriptprofile.js"></script>
