@@ -1,161 +1,18 @@
+//Calendar for Main Page
 document.addEventListener("DOMContentLoaded", function () {
-  var calendarEl = document.getElementById("calendar");
+  var eventsData = [];
+  dbEvents()
+  .then((data)=>{
+    console.log(data); 
+    for(let i=0; i < data.length; i++){
+      eventsData.push({id:data[i].id,title:data[i].title,start:data[i].date,url:window.location+'event/'+data[i].id})
+    }
+    
+  var calendarEl = document.getElementById("calendar");  
   var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: "dayGridMonth",
     timeZone: 'UTC',
-    events: [
-      {
-        id: '1',
-        title: 'YQM Country Fest',
-        start: '2023-08-25',
-        url: `${window.location}event/1`
-      },
-
-      {
-        id: '2',
-        title: 'Craft Beer Festival',
-        start: '2023-03-11',
-        url: `${window.location}event/2`
-      },
-
-      {
-        id: '3',
-        title: 'Brew Festival',
-        start: '2023-08-05',
-        url: `${window.location}event/3`
-      },
-
-      {
-        id: '4',
-        title: 'Cooking Camp',
-        start: '2023-03-06',
-        url: `${window.location}event/4`
-      },
-
-      {
-        id: '5',
-        title: 'Stone Soup Society',
-        start: '2023-02-27',
-        url: `${window.location}event/5`
-      },
-
-      {
-        id: '6',
-        title: 'Craft Beer Dinner',
-        start: '2023-03-10',
-        url: `${window.location}event/6`
-      },
-
-      {
-        id: '7',
-        title: 'Living Roots',
-        start: '2023-06-08',
-        url: `${window.location}event/7`
-      },
-
-      {
-        id: '8',
-        title: 'Beer on the Bridge',
-        start: '2023-07-08',
-        url: `${window.location}event/8`
-      },
-
-      {
-        id: '9',
-        title: 'Ballet by the Ocean',
-        start: '2023-07-05',
-        url: `${window.location}event/9`
-      },
-
-      {
-        id: '10',
-        title: 'Cultural Festival',
-        start: '2023-06-24',
-        url: `${window.location}event/10`
-      },
-
-      {
-        id: '11',
-        title: 'Songwriter circle',
-        start: '2023-03-09',
-        url:`${window.location}event/11`
-      },
-
-      {
-        id: '12',
-        title: 'The Last Waltz',
-        start: '2023-04-08',
-        url: `${window.location}event/12`
-      },
-      
-      {
-        id: '13',
-        title: 'Powerlifting Championship',
-        start: '2023-03-25',
-        url: `${window.location}event/13`
-      },
-
-      {
-        id: '14',
-        title: 'Shooting clinic',
-        start: '2023-03-09',
-        url: `${window.location}event/14`
-      },
-
-      {
-        id: '15',
-        title: 'Zumba',
-        start: '2023-02-23',
-        url: `${window.location}event/15`
-      },
-
-      {
-        id: '16',
-        title: 'Paddling Film',
-        start: '2023-04-01',
-        url: `${window.location}event/16`
-      },
-
-      {
-        id: '17',
-        title: 'Monster Mania',
-        start: '2023-06-17',
-        url: `${window.location}event/17`
-      },
-
-      {
-        id: '18',
-        title: 'Tech Hiring Event',
-        start: '2023-03-17',
-        url: `${window.location}event/18`
-      },
-
-      {
-        id: '19',
-        title: 'Career Fair',
-        start: '2023-04-12',
-        url: `${window.location}event/19`
-      },
-
-      {
-        id: '20',
-        title: 'Job Fair',
-        start: '2023-04-21',
-        url: `${window.location}event/20`
-      },
-
-      {
-        id: '21',
-        title: 'Pittsburgh Career Fair',
-        start: '2023-03-06',
-        url: `${window.location}event/21`
-      },
-
-
-
-
-
-    ],
+    events: eventsData,
 
     eventClick: function (info) {
       info.jsEvent.preventDefault();
@@ -166,12 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
   });
+  console.log(eventsData)
   calendar.render();
-  console.log(info.event.url)
+  // console.log(info.event.url)  
+  });
 });
 
-
-
-var event = calendar.getEventById('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12') // an event object!
-var start = event.start // a property (a Date object)
-console.log(start.toISOString()) // "2018-09-01T00:00:00.000Z"
+const dbEvents = async ()=>{
+  const result = await fetch('/events', {
+    method: 'GET',
+  });
+  const json = await result.json();
+  return json;
+}

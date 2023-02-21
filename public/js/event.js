@@ -1,4 +1,4 @@
-
+// Save function to save event
 const saveButtonHandler = async (event) => {
   // get the event details
   const event_id = event.target.getAttribute('data-id');  
@@ -24,6 +24,7 @@ const saveButtonHandler = async (event) => {
   }
 };
 
+//Get ticket function 
 const ticketButtonHandler = async (event) => {
    // get the event details
   const event_id = event.target.getAttribute('data-id');

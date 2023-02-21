@@ -1,4 +1,4 @@
-
+// Delete function for saved event in profile
 const delButtonHandler = async (event) => {
     // console.log('it is clicked')
     if (event.target.hasAttribute('data-id')) {
@@ -22,6 +22,8 @@ document
   .querySelector('.del_event')
   .addEventListener('click', delButtonHandler);
 
+
+  // Note function for saved event in profile
   async function editNoteHandler(event) {
     // event.preventDefault();
     console.log('clicked')
