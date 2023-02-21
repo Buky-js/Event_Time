@@ -1,4 +1,4 @@
-<section class="painting" style="width: 60%; align-items:center">
+<section class="painting" style="width: 90%; align-items:center">
   <img src="/images/{{event.filename}}" alt="{{event.description}}">
   <div class="painting-details">
     <h3>{{event.title}}</h3>
@@ -10,12 +10,12 @@
     <p style="font-weight: 500;">{{event.description}}</p>
     <br>
     <div >
-      <div class='card event-list'>
-        <p >
-        <button class="btn btn-primary save_event" style="width: 20%"data-id="{{event.id}}" data-title="{{event.title}}" aria-label="save event" >Save Event</button>
-        </p>
-        <p >
-        <button class="btn btn-primary get_ticket" style="width: 20%" data-id="{{event.id}}" aria-label="get your ticket">Get your ticket</button>
+      <div >
+        <p class="btn-group event-btn" >
+        <button class="btn btn-primary save_event event-list" data-id="{{event.id}}" data-title="{{event.title}}" aria-label="save event" >Save Event</button>
+        {{!-- </p>
+        <p > --}}
+        <button class="btn btn-primary get_ticket event-list" data-id="{{event.id}}" aria-label="get your ticket">Get your ticket</button>
         </p>
       </div>
   </div>
