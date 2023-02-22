@@ -31,9 +31,10 @@ Contributions on Stackoverflow https://stackoverflow.com/questions/
 
 ## URLs
 
-The URL of the deployed application is: https://github.com/Buky-js/Event_Time
+The URL of the deployed application is: https://aqueous-plateau-28230.herokuapp.com/
 
-The URL of the GitHub repository containing the code is: https://aqueous-plateau-28230.herokuapp.com/
+The URL of the GitHub repository containing the code is: https://github.com/Buky-js/Event_Time
+
 
 ## License
 
