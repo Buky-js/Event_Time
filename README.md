@@ -24,7 +24,9 @@ Using port 3001, you can access the home page in the browser and browse the webs
 ## Credits
 
 Class instructors
+
 UNB Bootcamp class materials
+
 Contributions on Stackoverflow https://stackoverflow.com/questions/
 
 ## URLs
